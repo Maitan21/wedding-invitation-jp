@@ -442,7 +442,7 @@
                                 </label>
                             </div>
 
-                            <!-- <div class="ft-opti mt-2 mb-2">【간사이 이외지역에서 오시는 분 체크필수】</div>
+                            <div class="ft-opti mt-2 mb-2">【関西以外の地域からお越しの方チェック必須】</div>
                             <div class="checkbox-wrapper">
                                 <input id="terms-checkbox-37" name="checkbox" type="checkbox">
                                 <label class="terms-label" for="terms-checkbox-37">
@@ -456,7 +456,7 @@
                                     
                                 </label>
                                 </div>                                      
-                            <div class="mt-2 ft-opti" style="font-size:0.8rem; color:red; font-weight:bold;">교통비 일괄 3만엔 지원</div> -->
+                            <!-- <div class="mt-2 ft-opti" style="font-size:0.8rem; color:red; font-weight:bold;">교통비 일괄 3만엔 지원</div> -->
                             
                             <button type="submit" class="btn btn-light shadow rounded-4 mt-2">
                                 <i class="fa-solid fa-envelope me-2 "></i><span class="ft-opti">確認</span>
@@ -678,7 +678,7 @@
         const button = form.querySelector('button[type="submit"]');
         const koreaSelected = form.querySelector('input[id="Korea"]:checked') !== null;
         const japanSelected = form.querySelector('input[id="Japan"]:checked') !== null;
-        //const regionCheckbox = form.querySelector('#terms-checkbox-37').checked;
+        const regionCheckbox = form.querySelector('#terms-checkbox-37').checked;
 
         // 국가 코드를 설정합니다.
         let countryCode = "";
@@ -696,13 +696,15 @@
             phoneNumber: `${countryCode} ${phoneNumber}`,
             email,
             allergy,
+            regionCheckbox
         };
-        let html_txt = `<div class="row"> <div class="col-4"> <p class=" formTitle">ご出欠 |</p> </div> <div class="col-8"> <p class=" formContext" style="color:red">${presence ? 'ご出席' : 'ご欠席'}</p> </div> </div>`;
-        html_txt += `<div class="row"> <div class="col-4"> <p class="  formTitle">お名前 |</p> </div> <div class="col-8"> <p class="  formContext">${name}</p> </div> </div>`;
-        html_txt += `<div class="row"> <div class="col-4"> <p class="  formTitle">カタカナ |</p> </div> <div class="col-8"> <p class="  formContext">${katakana}</p> </div> </div>`;
-        html_txt += `<div class="row"> <div class="col-4"> <p class="  formTitle">電話番号 |</p> </div> <div class="col-8"> <p class="  formContext">${countryCode} ${phoneNumber}</p> </div> </div>`;
-        html_txt += `<div class="row"> <div class="col-4"> <p class="  formTitle">メール |</p> </div> <div class="col-8" style="word-wrap:break-word;"> <p class="  formContext">${email}</p> </div> </div>`;
-        html_txt += `<div class="row"> <div class="col-4"> <p class="  formTitle">アレルギ |</p> </div> <div class="col-8"> <p class="  formContext">${allergy}</p> </div> </div>`;
+        let html_txt = `<div class="row"> <div class="col-4"> <p class="ft-opti formTitle">ご出欠 |</p> </div> <div class="col-8"> <p class="formContext" style="color:red;">${presence ? 'ご出席' : 'ご欠席'}</p> </div> </div>`;
+        html_txt += `<div class="row"> <div class="col-4"> <p class="ft-opti formTitle">お名前 |</p> </div> <div class="col-8" style="word-wrap:break-word;"> <p class="formContext">${name}</p> </div> </div>`;
+        html_txt += `<div class="row"> <div class="col-4"> <p class="ft-opti formTitle">カタカナ |</p> </div> <div class="col-8" style="word-wrap:break-word;"> <p class="formContext" >${katakana}</p> </div> </div>`;
+        html_txt += `<div class="row"> <div class="col-4"> <p class="ft-opti formTitle">電話番号 |</p> </div> <div class="col-8"> <p class="formContext" >${countryCode} ${phoneNumber}</p> </div> </div>`;
+        html_txt += `<div class="row"> <div class="col-4"> <p class="ft-opti formTitle">メール |</p> </div> <div class="col-8" style="word-wrap:break-word;"> <p class="formContext">${email}</p> </div> </div>`;
+        html_txt += `<div class="row"> <div class="col-4"> <p class="ft-opti formTitle">アレルギ |</p> </div> <div class="col-8"> <p class="formContext" style="word-wrap:break-word;">${allergy}</p> </div> </div>`;
+        html_txt += `<div class="row"> <div class="col-4"> <p class="ft-opti formTitle">お住い |</p> </div> <div class="col-8"> <p class="formContext" style="color:red;"> ${regionCheckbox ? '関西以外' : '関西'}</p> </div> </div>`;
            // HTML 문자열을 생성합니다.
         document.getElementById('form-confirm').innerHTML = html_txt;
         $('#form-confirm').data('form', formData);
