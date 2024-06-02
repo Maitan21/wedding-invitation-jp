@@ -56,6 +56,7 @@ export const util = (() => {
         }, timeout);
     };
 
+
     const guest = () => {
         const name = (new URLSearchParams(window.location.search)).get('to');
 
@@ -64,26 +65,25 @@ export const util = (() => {
             document.getElementById('family-reception').style.display = "none"
             document.getElementById('family-photo').style.display = "none"
             return;
-        }else if(name=="가족"){
-            const reqeustMsg = `<div class="card-body border rounded-4 shadow p-3 m-3 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500" > <h1 class="sectionEng ft-crimsonpro mb-0" >REQUEST</h1> <h1 class="sectionHead ft-gowundodum" >요청</h1> <p class="ft-gowundodum mt-3 mb-4" style="font-size: 1rem;">
-            사랑하는 친척 가족 여러분<br>
-            13:30 부터 친족 대기실(5층)<br>
-            이용이 가능합니다.<br> 
-            14:30 에 친족 단체 촬영이 있습니다.(6층) </p> </div>`
+        }else if(name=="family"){
+            const reqeustMsg = `<div class="card-body border rounded-4 shadow p-3 m-3 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500" > <h1 class="sectionEng ft-crimsonpro mb-0" >Message</h1> <h1 class="sectionHead ft-opti" >メッセージ</h1> <p class="ft-opti mt-3 mb-4" style="font-size: 1rem;">
+            親愛なる親戚の皆様<br>
+            13:30から親戚待機室（5階）をご利用いただけます。<br>
+            14:30に親戚の集合写真撮影があります。（6階）</p></div>`
 
             const familyReception = `
-            <h1 class="ft-gowundodum" style="font-size: 1.1rem;font-weight:bold">친족 대기실</h1>
-            <p>13:30　5층 ー 日和</p>
+            <h1 class="ft-opti" style="font-size: 1.1rem;font-weight:bold">親戚控え室</h1>
+            <p>13:30　5階 ー 日和</p>
             `
             const familyPhoto = `
-            <h1 class="ft-gowundodum" style="font-size: 1.1rem;font-weight:bold">친족 단체 사진촬영</h1>
-            <p>14:30　6층 ー Studio</p>
+            <h1 class="ft-opti" style="font-size: 1.1rem;font-weight:bold">親族団体撮影</h1>
+            <p>14:30　6階 ー Studio</p>
             `
             document.getElementById('req-message').innerHTML = reqeustMsg;
             document.getElementById('family-reception').innerHTML = familyReception;
             document.getElementById('family-photo').innerHTML = familyPhoto;
         }else if(name=="natsuki"){
-            const reqeustMsg = `<div class="card-body border rounded-4 shadow p-3 m-3 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500" > <h1 class="sectionEng ft-crimsonpro mb-0" >REQUEST</h1> <h1 class="sectionHead ft-gowundodum" >요청</h1> <p class="ft-gowundodum mt-3 mb-4" style="font-size: 1rem;">
+            const reqeustMsg = `<div class="card-body border rounded-4 shadow p-3 m-3 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500" > <h1 class="sectionEng ft-crimsonpro mb-0" >REQUEST</h1> <h1 class="sectionHead ft-opti" >お願い</h1> <p class="ft-opti mt-3 mb-4" style="font-size: 1rem;">
             夏樹へ<br>
             結婚式には、ぜひ夏樹に友人代表として<br>
             スピーチをお願いしたいと思っています。<br>
@@ -96,7 +96,7 @@ export const util = (() => {
             document.getElementById('family-reception').style.display = "none"
             document.getElementById('family-photo').style.display = "none"
         }else if(name=="SB"){
-            const reqeustMsg = `<div class="card-body border rounded-4 shadow p-3 m-3 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500" > <h1 class="sectionEng ft-crimsonpro mb-0" >REQUEST</h1> <h1 class="sectionHead ft-gowundodum" >요청</h1> <p class="ft-gowundodum mt-3 mb-4" style="font-size: 1rem;">
+            const reqeustMsg = `<div class="card-body border rounded-4 shadow p-3 m-3 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500" > <h1 class="sectionEng ft-crimsonpro mb-0" >REQUEST</h1> <h1 class="sectionHead ft-opti" >お願い</h1> <p class="ft-opti mt-3 mb-4" style="font-size: 1rem;">
             夏樹へ<br>
             結婚式には、ぜひ夏樹に友人代表として<br>
             スピーチをお願いしたいと思っています。<br>
@@ -116,8 +116,6 @@ export const util = (() => {
 
         // guest.appendChild(div);
     };
-
- 
 
     const show = () => {
         guest();

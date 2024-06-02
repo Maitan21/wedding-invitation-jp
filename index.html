@@ -258,7 +258,7 @@
 
                         <h1 class="sectionEng ft-crimsonpro mb-0" >LOCATION</h1>
                         <h1 class="sectionHead ft-opti" >アクセス</h1>
-                        <p class="mb-0 mt-1 mx-1 pb-4" style="font-size: 0.9rem;">
+                        <p class="ft-josefin mb-0 mt-1 mx-1 pb-4" style="font-size: 0.9rem;">
                             4 Chome-3-3 Namba, Chuo Ward, Osaka, 542-0076
                         </p>
                         <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6563.109719168302!2d135.49742987648855!3d34.66594317293211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e75b2a21f615%3A0x61a47fd8e1f83b35!2z7Zi47YWUIOuhnOyXtCDtgbTrnpjsi50g7Jik7IKs7Lm0!5e0!3m2!1sko!2sjp!4v1716120295950!5m2!1sko!2sjp" width="100%" height="300vw" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
@@ -742,65 +742,6 @@
         
     }
 
-    const guest = () => {
-        const name = (new URLSearchParams(window.location.search)).get('to');
-
-        if (!name) {
-            document.getElementById('req-message').style.display = "none"
-            document.getElementById('family-reception').style.display = "none"
-            document.getElementById('family-photo').style.display = "none"
-            return;
-        }else if(name=="親族"){
-            const reqeustMsg = `<div class="card-body border rounded-4 shadow p-3 m-3 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500" > <h1 class="sectionEng ft-crimsonpro mb-0" >Message</h1> <h1 class="sectionHead ft-opti" >メッセージ</h1> <p class="ft-opti mt-3 mb-4" style="font-size: 1rem;">
-            親愛なる親戚の皆様<br>
-            13:30から親戚待機室（5階）をご利用いただけます。<br>
-            14:30に親戚の集合写真撮影があります。（6階）</p></div>`
-
-            const familyReception = `
-            <h1 class="ft-opti" style="font-size: 1.1rem;font-weight:bold">親戚控え室</h1>
-            <p>13:30　5階 ー 日和</p>
-            `
-            const familyPhoto = `
-            <h1 class="ft-opti" style="font-size: 1.1rem;font-weight:bold">親族団体撮影</h1>
-            <p>14:30　6階 ー Studio</p>
-            `
-            document.getElementById('req-message').innerHTML = reqeustMsg;
-            document.getElementById('family-reception').innerHTML = familyReception;
-            document.getElementById('family-photo').innerHTML = familyPhoto;
-        }else if(name=="natsuki"){
-            const reqeustMsg = `<div class="card-body border rounded-4 shadow p-3 m-3 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500" > <h1 class="sectionEng ft-crimsonpro mb-0" >REQUEST</h1> <h1 class="sectionHead ft-opti" >お願い</h1> <p class="ft-opti mt-3 mb-4" style="font-size: 1rem;">
-            夏樹へ<br>
-            結婚式には、ぜひ夏樹に友人代表として<br>
-            スピーチをお願いしたいと思っています。<br>
-            特別な日に夏樹の温かい言葉で<br>
-            祝福していただけたら嬉しいです。<br>
-            どうぞよろしくお願いします！<br>
-            </p> </div>`
-
-            document.getElementById('req-message').innerHTML = reqeustMsg;
-            document.getElementById('family-reception').style.display = "none"
-            document.getElementById('family-photo').style.display = "none"
-        }else if(name=="SB"){
-            const reqeustMsg = `<div class="card-body border rounded-4 shadow p-3 m-3 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500" > <h1 class="sectionEng ft-crimsonpro mb-0" >REQUEST</h1> <h1 class="sectionHead ft-opti" >お願い</h1> <p class="ft-opti mt-3 mb-4" style="font-size: 1rem;">
-            夏樹へ<br>
-            結婚式には、ぜひ夏樹に友人代表として<br>
-            スピーチをお願いしたいと思っています。<br>
-            特別な日に夏樹の温かい言葉で<br>
-            祝福していただけたら嬉しいです。<br>
-            どうぞよろしくお願いします！<br>
-            </p> </div>`
-
-            document.getElementById('req-message').innerHTML = reqeustMsg;
-            document.getElementById('family-reception').style.display = "none"
-            document.getElementById('family-photo').style.display = "none"
-        }
-
-        // const div = document.createElement('div');
-        // div.classList.add('m-2');
-        // div.innerHTML = `<p class="mt-0 mb-1 mx-0 p-0">${guest.getAttribute('data-message')}</p><h2 class="">${escapeHtml(name)}</h2>`;
-
-        // guest.appendChild(div);
-    };
    </script>
 </body>
 
