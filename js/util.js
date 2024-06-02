@@ -67,8 +67,9 @@ export const util = (() => {
             return;
         }else if(name=="family"){
             const reqeustMsg = `<div class="card-body border rounded-4 shadow p-3 m-3 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500" > <h1 class="sectionEng ft-crimsonpro mb-0" >Message</h1> <h1 class="sectionHead ft-opti" >メッセージ</h1> <p class="ft-opti mt-3 mb-4" style="font-size: 1rem;">
-            親愛なる親戚の皆様<br>
-            13:30から親戚待機室（5階）をご利用いただけます。<br>
+            親戚の皆様<br><br>
+            13:30から親戚待機室（5階）<br>
+            をご利用いただけます。<br>
             14:30に親戚の集合写真撮影があります。（6階）</p></div>`
 
             const familyReception = `
