@@ -12,7 +12,6 @@ body:lang(jp){
   font-family: "Noto Serif JP", serif !important;
   padding: 0 !important;
 }
-
 .namecontainer {
   display: flex !important;
   flex-direction: column;
@@ -678,12 +677,20 @@ body:lang(jp){
     overflow: hidden;
     border-radius: 50%;
 }
-
+.crop {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 .img-main {
-    width: 22rem;
-    height: 22rem;
-    position: relative;
+  position: relative;
+    width: 22rem; /* 부모 요소의 너비를 원하는 대로 조정하세요 */
+    height: 22rem; /* 부모 요소의 높이를 원하는 대로 조정하세요 */
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
 }
 

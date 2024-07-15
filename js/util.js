@@ -69,16 +69,16 @@ export const util = (() => {
             const reqeustMsg = `<div class="card-body border rounded-4 shadow p-3 m-3 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500" > <h1 class="sectionEng ft-crimsonpro mb-0" >Message</h1> <h1 class="sectionHead ft-opti" >メッセージ</h1> <p class="ft-opti mt-3 mb-4" style="font-size: 1rem;">
             親戚の皆様<br><br>
             13:30から親戚待機室（5階）<br>
-            をご利用いただけます。<br>
-            14:30に親戚の集合写真撮影があります。（6階）</p></div>`
+            をご利用いただけます<br>
+            15:30に親戚の集合写真撮影があります（6階）</p></div>`
 
             const familyReception = `
             <h1 class="ft-opti" style="font-size: 1.1rem;font-weight:bold">親戚控え室</h1>
-            <p>13:30　5階 ー 日和</p>
+            <p>13:30　5階</p>
             `
             const familyPhoto = `
             <h1 class="ft-opti" style="font-size: 1.1rem;font-weight:bold">親族団体撮影</h1>
-            <p>14:30　6階 ー Studio</p>
+            <p>15:30　6階 ー Studio</p>
             `
             document.getElementById('req-message').innerHTML = reqeustMsg;
             document.getElementById('family-reception').innerHTML = familyReception;
@@ -87,22 +87,21 @@ export const util = (() => {
             const reqeustMsg = `<div class="card-body border rounded-4 shadow p-3 m-3 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500" > <h1 class="sectionEng ft-crimsonpro mb-0" >REQUEST</h1> <h1 class="sectionHead ft-opti" >お願い</h1> <p class="ft-opti mt-3 mb-4" style="font-size: 1rem;">
             夏樹へ<br>
             結婚式には、ぜひ夏樹に友人代表として<br>
-            スピーチをお願いしたいと思っています。<br>
+            スピーチをお願いしたいと思っています<br>
             特別な日に夏樹の温かい言葉で<br>
-            祝福していただけたら嬉しいです。<br>
+            祝福していただけたら嬉しいです<br>
             どうぞよろしくお願いします！<br>
             </p> </div>`
 
             document.getElementById('req-message').innerHTML = reqeustMsg;
             document.getElementById('family-reception').style.display = "none"
             document.getElementById('family-photo').style.display = "none"
-        }else if(name=="SB"){
+        }else if(name=="kachi"){
             const reqeustMsg = `<div class="card-body border rounded-4 shadow p-3 m-3 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500" > <h1 class="sectionEng ft-crimsonpro mb-0" >REQUEST</h1> <h1 class="sectionHead ft-opti" >お願い</h1> <p class="ft-opti mt-3 mb-4" style="font-size: 1rem;">
-            夏樹へ<br>
-            結婚式には、ぜひ夏樹に友人代表として<br>
-            スピーチをお願いしたいと思っています。<br>
-            特別な日に夏樹の温かい言葉で<br>
-            祝福していただけたら嬉しいです。<br>
+            可知さん<br>
+            結婚式には、ぜひ乾杯をお願いしたいと思っています<br>
+            特別な日に可知さんの温かい言葉で<br>
+            祝福していただけたら嬉しいです<br>
             どうぞよろしくお願いします！<br>
             </p> </div>`
 
