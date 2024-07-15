@@ -678,12 +678,11 @@ body:lang(jp){
     border-radius: 50%;
 }
 .crop {
-  transform: scale(1.1);
-  width: 100%;
-  height: 100%;
+  transform: scale(1.3);
   object-fit: cover;
-  object-position: center;
+  object-position: -11px center;
 }
+
 .img-main {
   position: relative;
     width: 22rem; /* 부모 요소의 너비를 원하는 대로 조정하세요 */
