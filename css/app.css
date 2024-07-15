@@ -678,6 +678,7 @@ body:lang(jp){
     border-radius: 50%;
 }
 .crop {
+  transform: scale(1.1);
   width: 100%;
   height: 100%;
   object-fit: cover;
