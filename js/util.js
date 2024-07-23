@@ -65,7 +65,7 @@ export const util = (() => {
             const reqeustMsg = `<div class="card-body border rounded-4 shadow p-3 m-3 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500" > <h1 class="sectionEng ft-crimsonpro mb-0" >Message</h1> <h1 class="sectionHead ft-opti" >メッセージ</h1> <p class="ft-opti mt-3 mb-4" style="font-size: 1rem;">
             当日は5階クロークにお荷物お預けいただき<br>
             受付のお時間になりましたら<br>
-            9階の受付までお越しくださいませ<br><br>
+            7階の受付までお越しくださいませ<br><br>
 
             お着替えは4階更衣空をご利用ください<br><br>
 
