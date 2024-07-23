@@ -61,11 +61,34 @@ export const util = (() => {
         const name = (new URLSearchParams(window.location.search)).get('to');
 
         if (!name) {
-            document.getElementById('req-message').style.display = "none"
+            
+            const reqeustMsg = `<div class="card-body border rounded-4 shadow p-3 m-3 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500" > <h1 class="sectionEng ft-crimsonpro mb-0" >Message</h1> <h1 class="sectionHead ft-opti" >メッセージ</h1> <p class="ft-opti mt-3 mb-4" style="font-size: 1rem;">
+            当日は5階クロークにお荷物お預けいただき<br>
+            受付のお時間になりましたら<br>
+            9階の受付までお越しくださいませ<br><br>
+
+            お着替えは4階更衣空をご利用ください<br><br>
+
+            お車でお越しの場合は<br>
+            ホテル併設の駐車場予約が可能ですので<br>
+            前日までに新郎新婦へ申し付けください
+            </p> </div>`
+
+
+            const receptionTime = `
+            <h1 class="ft-opti" style="font-size: 1.1rem;font-weight:bold">受付</h1>
+            <p>14:30　7階 ー 木漏日</p>
+            `
+            document.getElementById('reception-time').innerHTML =　receptionTime
+            document.getElementById('req-message').innerHTML = reqeustMsg;
             document.getElementById('family-reception').style.display = "none"
             document.getElementById('family-photo').style.display = "none"
             return;
         }else if(name=="family"){
+            const receptionTime = `
+            <h1 class="ft-opti" style="font-size: 1.1rem;font-weight:bold">受付</h1>
+            <p>14:00　7階 ー 木漏日</p>
+            `
             const reqeustMsg = `<div class="card-body border rounded-4 shadow p-3 m-3 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500" > <h1 class="sectionEng ft-crimsonpro mb-0" >Message</h1> <h1 class="sectionHead ft-opti" >メッセージ</h1> <p class="ft-opti mt-3 mb-4" style="font-size: 1rem;">
             親戚の皆様<br><br>
             13:30から親戚待機室（5階）<br>
@@ -80,10 +103,16 @@ export const util = (() => {
             <h1 class="ft-opti" style="font-size: 1.1rem;font-weight:bold">親族団体撮影</h1>
             <p>15:30　6階 ー Studio</p>
             `
+            document.getElementById('reception-time').innerHTML =　receptionTime
             document.getElementById('req-message').innerHTML = reqeustMsg;
             document.getElementById('family-reception').innerHTML = familyReception;
             document.getElementById('family-photo').innerHTML = familyPhoto;
         }else if(name=="natsuki"){
+            const receptionTime = `
+            <h1 class="ft-opti" style="font-size: 1.1rem;font-weight:bold">受付</h1>
+            <p>14:30　7階 ー 木漏日</p>
+            `
+
             const reqeustMsg = `<div class="card-body border rounded-4 shadow p-3 m-3 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500" > <h1 class="sectionEng ft-crimsonpro mb-0" >REQUEST</h1> <h1 class="sectionHead ft-opti" >お願い</h1> <p class="ft-opti mt-3 mb-4" style="font-size: 1rem;">
             夏樹へ<br>
             結婚式には、ぜひ夏樹に友人代表として<br>
@@ -93,10 +122,17 @@ export const util = (() => {
             どうぞよろしくお願いします！<br>
             </p> </div>`
 
+            document.getElementById('reception-time').innerHTML =　receptionTime
             document.getElementById('req-message').innerHTML = reqeustMsg;
             document.getElementById('family-reception').style.display = "none"
             document.getElementById('family-photo').style.display = "none"
         }else if(name=="kachi"){
+
+            const receptionTime = `
+            <h1 class="ft-opti" style="font-size: 1.1rem;font-weight:bold">受付</h1>
+            <p>14:30　7階 ー 木漏日</p>
+            `
+
             const reqeustMsg = `<div class="card-body border rounded-4 shadow p-3 m-3 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500" > <h1 class="sectionEng ft-crimsonpro mb-0" >REQUEST</h1> <h1 class="sectionHead ft-opti" >お願い</h1> <p class="ft-opti mt-3 mb-4" style="font-size: 1rem;">
             可知さん<br>
             結婚式には、ぜひ乾杯をお願いしたいと思っています<br>
@@ -105,6 +141,7 @@ export const util = (() => {
             どうぞよろしくお願いします！<br>
             </p> </div>`
 
+            document.getElementById('reception-time').innerHTML =　receptionTime
             document.getElementById('req-message').innerHTML = reqeustMsg;
             document.getElementById('family-reception').style.display = "none"
             document.getElementById('family-photo').style.display = "none"
