@@ -207,7 +207,7 @@
                     </div>
                 </div>
                 <div data-aos="fade-up" data-aos-duration="1500">
-                    <p class="mb-4">ユンサン <span style="color: #ea7664;"">♥</span> まいの結婚式が<span id="countdown"></span></p>
+                    <p class="mb-4">ユンサン <span style="color: #ea7664;"">♥</span> まいの結婚式まで<span id="countdown"></span></p>
                 </div>
                 
             </div>
@@ -661,7 +661,7 @@
     const countdownElement = document.getElementById('countdown');
 
     if (diffDays >= 0) {
-    countdownElement.innerHTML = `<span style="color: #ea7664; font-weight:bold;"> ${diffDays}</span>日残りました`;
+    countdownElement.innerHTML = `残り<span style="color: #ea7664; font-weight:bold;"> ${diffDays}</span>日`;
     } else {
         countdownElement.innerHTML = ` <span style="color: #ea7664; font-weight:bold;">${Math.abs(diffDays)}</span>日経ちました`;
     }
