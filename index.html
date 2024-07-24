@@ -424,7 +424,7 @@
                                     <label class="dropdown-container" for="dropdown"></label>
                                     <div class="input-wrapper">
                                         <div class="phonefield ft-opti">
-                                            <input oninput="oninputPhone(this)" maxlength="13" id="phonenumber" type="text"  placeholder="電話番号(半角数字)" required >
+                                            <input oninput="oninputPhone(this)" maxlength="13" id="phonenumber" type="text"  placeholder="電話番号(半角数字のみ)" required >
                                         </div>
                                     </div>
                                     <div style="padding-left: 0.3rem; color:red;">
@@ -668,14 +668,15 @@
 
     function oninputPhone(target) {
         target.value = target.value
-        .replace(/[^0-9]/g, '')
-        .replace(/(^0[789]0)([0-9]{4})([0-9]{4})|(^02.{0}|^01.{1}|[0-9]{3,4})([0-9]{3,4})([0-9]{4})/g, function(_, p1, p2, p3, p4, p5, p6) {
-            if (p1 && p2 && p3) {
-                return p1 + '-' + p2 + '-' + p3;
-            } else {
-                return p4 + '-' + p5 + '-' + p6;
-            }
-        });
+            .replace(/[^0-9]/g, '')
+            .replace(/^([1-9])/, '0$1') // Add 0 if the first digit is not 0
+            .replace(/(^0[789]0)([0-9]{4})([0-9]{4})|(^02.{0}|^01.{1}|[0-9]{3,4})([0-9]{3,4})([0-9]{4})/g, function(_, p1, p2, p3, p4, p5, p6) {
+                if (p1 && p2 && p3) {
+                    return p1 + '-' + p2 + '-' + p3;
+                } else {
+                    return p4 + '-' + p5 + '-' + p6;
+                }
+            });
     }
 
 
